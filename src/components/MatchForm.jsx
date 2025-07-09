@@ -22,7 +22,7 @@ const MatchForm = ({ onResults }) => {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.post('https://neighborfit-api.onrender.com/api/match', prefs);
+      const res = await axios.post("http://localhost:5000/api/match", prefs);
 
 
       onResults(res.data.results);
